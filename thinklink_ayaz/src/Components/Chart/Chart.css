@@ -1,5 +1,6 @@
 .mainchart{
-    border:1px solid rgb(75, 53, 53);
-    height: 500px;
-    margin-top: -410px
+    /* border:1px solid rgb(75, 53, 53); */
+    height: 400px;
+    width: 865px;
+    /* margin-top: -410px */
 }

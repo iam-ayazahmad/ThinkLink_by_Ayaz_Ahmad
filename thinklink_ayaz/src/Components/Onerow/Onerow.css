@@ -1,0 +1,90 @@
+
+
+.myrow{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(128, 128, 128, 0.245);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.245);
+    padding: 15px 10px;
+    
+}
+
+.myrow:hover{
+
+    color:#c2033c;
+
+}
+
+.myrow>div{
+    /* border: 5px solid green; */
+    text-align: left;
+    margin-left: 10px;
+}
+.myrow :nth-child(1)
+{
+    flex-grow: 1;
+}
+.myrow :nth-child(2)
+{
+    flex-grow: 1;
+    font-size:15px;
+}
+.myrow :nth-child(3)
+{
+    flex-grow: 5;
+    font-size: 18px;
+    
+}
+.myrow :nth-child(4)
+{
+    flex-grow: 1;
+    text-align: center;
+    color: #2d4275;
+    background-color: #364f8e17;
+    
+    font-size: 15px;
+    
+}
+.myrow :nth-child(5)
+{
+    flex-grow: 1;
+    color:gray;
+    font-size: 15px;
+}
+.myrow :nth-child(6)
+{
+    flex-grow: 1;
+    color:gray;
+    font-size: 15px;
+}
+.myrow :nth-child(7)
+{
+    flex-grow: 1;
+    color:gray;
+    font-size: 15px;
+}
+.myrow :nth-child(8)
+{
+    flex-grow: 1;
+    color:gray;
+    font-size: 15px;
+}
+
+.myrow>img{
+    width: 5px;
+    
+}
+.myratiwxtra{
+    color: #2d4275;
+    background-color: #364f8e17;
+    
+    font-size: 25px;
+}
+.vine{
+    text-align: right;
+    color: #ef4959; 
+    margin-top: -50px;
+}

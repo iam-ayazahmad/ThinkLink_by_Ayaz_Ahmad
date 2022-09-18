@@ -11,13 +11,13 @@ const data = [
   {
     name: 'MON',
     uv: 5000,
-    pv: 5000,
+    pv: 1500,
     amt: 2210,
   },
   {
     name: 'TUE',
     uv: 2000,
-    pv: 2500,
+    pv: 2300,
     amt: 2290,
   },
   {
@@ -29,7 +29,7 @@ const data = [
   {
     name: 'THU',
     uv: 1890,
-    pv: 4800,
+    pv: 3000,
     amt: 2181,
   },
   {
@@ -48,7 +48,7 @@ const data = [
     name: 'SUN',
     uv: 3490,
     pv: 2000,
-    amt: 2100,
+    amt: 100,
   },
 ];
 
@@ -58,24 +58,19 @@ export default class Example extends PureComponent {
   render() {
     return (
         <div className='mainchart'>
-      <ResponsiveContainer width="70%" height="80%">
+      <ResponsiveContainer width="100%" height="100%">
         <LineChart
           width={500}
           height={300}
           data={data}
-        //   margin={{
-        //     top: 5,
-        //     right: 30,
-        //     left: 20,
-        //     bottom: 5,
-        //   }}
+         
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
+          <XAxis stroke="#3535356e" dataKey="name" />
+          <YAxis stroke="#3535356e"/>
           <Tooltip />
-          <Legend />
-          <Line  dataKey="pv" stroke="#0e9e5b" activeDot={{ r: 5 }} />
+         
+          <Line  dataKey="pv"  stroke="#0e9e5b" activeDot={{ r: 5 }} />
           
         </LineChart>
       </ResponsiveContainer>
@@ -83,3 +78,4 @@ export default class Example extends PureComponent {
     );
   }
 }
+

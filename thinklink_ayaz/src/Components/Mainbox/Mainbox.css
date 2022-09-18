@@ -1,11 +1,13 @@
 .mainbox{
     width: 82%;
     margin: 0.5%;
-    padding:  5px 1%;
+    padding:  5px 1% 5px 0%;
     height: inherit;
     height: 500px;
     /* border:5px solid rgb(0, 102, 255); */
-    z-index: 3;
+    z-index: 1;
+    margin-left: 17%;
+    margin-top: 56px;
     
 }
 .winebutton{
@@ -87,10 +89,11 @@
 
 /* third main box styles */
 .thirdbox{
-    /* border: 2px solid rgb(1, 73, 197); */
-    width: 98%;
-    margin: 1%;
-    height: 500px;
+    border: 1px solid rgba(114, 114, 114, 0.33);
+    width: 95%;
+    
+    height: 670px;
+    padding: 1% 1% 1% 1%;
 }
 .subthird1{
     display: flex;
@@ -106,8 +109,8 @@
     align-items: center;
     
 }
-.newsub2>:nth-child(1),:nth-child(3),:nth-child(4){
-    margin: 0px 2%;
+.newsub2>:nth-child(3),:nth-child(4){
+    margin: 0px 3%;
 
 }
 .newsub1{
@@ -126,4 +129,169 @@
     align-items: center;
 
    
+}
+
+.chartmainbox{
+    /* border: 2px solid red; */
+   display: flex;
+   border-radius: 4px;
+
+  
+
+}
+.upperoneline{
+    display: flex;
+    /* border: 3px solid green; */
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.myflex{
+    display: flex;
+    align-items: center;
+}
+
+.chartrightbox{
+    text-align: left;
+    width: 25%;
+    /* border: 2px solid yellow; */
+}
+.myflex *{
+    color: #04cf3d;
+    font-weight: 500;
+}
+.graytext{
+    font-weight: 500;
+    color: gray;
+}
+
+/* styling for fourth box */
+
+.fourthboxmain{
+    
+    width:100%;
+  
+    
+}
+.mythead{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(128, 128, 128, 0.245);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.245);
+    padding: 15px 10px;
+    
+    
+}
+.mythead>div{
+    /* border: 5px solid green; */
+    text-align: left;
+    margin-left: 10px;
+}
+.mythead :nth-child(1)
+{
+    flex-grow: 1;
+}
+.mythead :nth-child(2)
+{
+    flex-grow: 1;
+}
+.mythead :nth-child(3)
+{
+    flex-grow: 7;
+}
+
+.mythead :nth-child(4)
+{
+    flex-grow: 1;
+}
+.mythead :nth-child(5)
+{
+    flex-grow: 1;
+}
+.mythead :nth-child(6)
+{
+    flex-grow: 1;
+}
+.mythead :nth-child(7)
+{
+    flex-grow: 1;
+}
+.mythead :nth-child(8)
+{
+    flex-grow: 1;
+}
+
+.myrow{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(128, 128, 128, 0.245);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.245);
+    padding: 15px 10px;
+}
+
+.myrow>div{
+    /* border: 5px solid green; */
+    text-align: left;
+    margin-left: 10px;
+}
+.myrow :nth-child(1)
+{
+    flex-grow: 1;
+}
+.myrow :nth-child(2)
+{
+    flex-grow: 1;
+    font-size:15px;
+}
+.myrow :nth-child(3)
+{
+    flex-grow: 5;
+    font-size: 18px;
+    
+}
+.myrow :nth-child(4)
+{
+    flex-grow: 1;
+    text-align: center;
+    color: #2d4275;
+    background-color: #364f8e17;
+    
+    font-size: 15px;
+    
+}
+.myrow :nth-child(5)
+{
+    flex-grow: 1;
+    color:gray;
+    font-size: 15px;
+}
+.myrow :nth-child(6)
+{
+    flex-grow: 1;
+    color:gray;
+    font-size: 15px;
+}
+.myrow :nth-child(7)
+{
+    flex-grow: 1;
+    color:gray;
+    font-size: 15px;
+}
+.myrow :nth-child(8)
+{
+    flex-grow: 1;
+    color:gray;
+    font-size: 15px;
+}
+
+.myrow>img{
+    width: 5px;
+    
 }

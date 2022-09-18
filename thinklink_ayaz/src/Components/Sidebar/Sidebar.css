@@ -2,14 +2,17 @@
 
 .sidemain{
     width: 16%;
-    background-color: rgb(255, 255, 255);
+    
     /* position: absolute; */
-    height: 1000px;
+    height: 700px;
     box-shadow: rgba(81, 81, 81, 0.081) 0px 1px 3px, rgba(95, 95, 95, 0.166) 0px 1px 2px;
     
     display: flex;
     flex-direction: column;
     min-height: 100px;
+    position: fixed;
+    background-color: white;
+    z-index: 1;
     
 }
 .sidemain>div{
@@ -43,7 +46,7 @@ cursor: pointer;
 
 .footer{
 
-    margin-top: 280%;
+    margin-top: 320px;
     
 }
 

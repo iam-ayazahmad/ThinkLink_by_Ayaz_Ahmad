@@ -1,7 +1,30 @@
+import { useState } from "react"
 import Example from "../Chart/Chart"
 import "../Mainbox/Mainbox.css"
+import { Onerow } from "../Onerow/Onerow"
+
+
 
 export const Mainbox=()=>{
+
+    const [show,setshow]=useState(false)
+    const [num,setnum]=useState(0)
+
+
+    let mydata= [{id:1,img:"https://placekitten.com/50/50",Name:"Staglin Family Vine.",das:"France . Sauternes",rating:"RP 95 +3",vintage:"1950",qty:4,volume:"Standard (500ml)",cost:56.95,pice:59.55},
+    {id:2,img:"https://placekitten.com/50/50",Name:"Bibi Best Vineyard...",das:"Syrah . Sauternes",rating:"RP 95 +3",vintage:"2010",qty:12,volume:"Magnum (700ml)",cost:66.95,pice:79.85},
+    {id:3,img:"https://placekitten.com/50/50",Name:"Cyuse kik Vineyard..",das:"USA . Sauternes",rating:"RP 95 +3",vintage:"1990",qty:8,volume:"Odd wall (900ml)",cost:86.75,pice:99.45},
+    {id:4,img:"https://placekitten.com/50/50",Name:"Staglin Family Vin...",das:"France . Sauternes",rating:"RP 95 +3",vintage:"1950",qty:4,volume:"Standard (500ml)",cost:56.95,pice:59.55},
+    {id:5,img:"https://placekitten.com/50/50",Name:"Bibi Best Vineyard...",das:"Syrah . Sauternes",rating:"RP 95 +3",vintage:"2010",qty:12,volume:"Magnum (700ml)",cost:66.95,pice:79.85},
+    {id:6,img:"https://placekitten.com/50/50",Name:"Cyuse kiky Vineyard..",das:"USA . Sauternes",rating:"RP 95 +3",vintage:"1990",qty:8,volume:"Odd wall (900ml)",cost:86.75,pice:99.45},
+    {id:7,img:"https://placekitten.com/50/50",Name:"Staglin Family Vine..",das:"France . Sauternes",rating:"RP 95 +3",vintage:"1950",qty:4,volume:"Standard (500ml)",cost:56.95,pice:59.55},
+    {id:8,img:"https://placekitten.com/50/50",Name:"Bibi Best Vineyard...",das:"Syrah . Sauternes",rating:"RP 95 +3",vintage:"2010",qty:12,volume:"Magnum (700ml)",cost:66.95,pice:79.85},
+    {id:9,img:"https://placekitten.com/50/50",Name:"Cyuse kiky Vineyard..",das:"USA . Sauternes",rating:"RP 95 +3",vintage:"1990",qty:8,volume:"Odd wall (900ml)",cost:86.75,pice:99.45},
+]
+
+
+
+
     return(
         <div className="mainbox">
             <div><p>Overview</p><button className="winebutton"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,16 +70,16 @@ Add new wine</button></div>
 
         <div className="subthird1">
 
-            <div className="newsub1"><h5>Total Sales Overview </h5><br /><p>7 - 11 Aug, 2022</p></div>
+            <div className="newsub1"><h5>Total Sales Overview </h5><br /><p className="graytext">7 - 11 Aug, 2022</p></div>
             <div className="newsub2"><svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.5 8L10.5 13L15.5 8" stroke="#262730" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                     <h5>This week</h5>
                     <p>Filter by</p>
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <p>Refresh Metrics</p><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M15.3392 0.660806L13.6565 2.34355C12.2089 0.89571 10.2092 0 8 0C3.71703 0 0.220129 3.36574 0.01 7.59655C-0.00093547 7.81648 0.176613 8 0.396806 8H1.30148C1.50642 8 1.6761 7.84026 1.68771 7.63568C1.87616 4.31126 4.62752 1.67742 8 1.67742C9.74719 1.67742 11.3276 2.38461 12.4714 3.52858L10.7254 5.27468C10.4815 5.51855 10.6542 5.93548 10.9991 5.93548H15.6129C15.8267 5.93548 16 5.76216 16 5.54839V0.934548C16 0.589677 15.583 0.416968 15.3392 0.660806ZM15.6032 8H14.6985C14.4936 8 14.3239 8.15974 14.3123 8.36432C14.1238 11.6887 11.3725 14.3226 8 14.3226C6.25281 14.3226 4.67235 13.6154 3.52858 12.4714L5.27465 10.7253C5.51852 10.4815 5.34581 10.0645 5.00094 10.0645H0.387097C0.173323 10.0645 0 10.2378 0 10.4516V15.0655C0 15.4103 0.416968 15.583 0.660806 15.3392L2.34355 13.6565C3.79113 15.1043 5.79084 16 8 16C12.283 16 15.7799 12.6343 15.99 8.40345C16.0009 8.18352 15.8234 8 15.6032 8Z" fill="#485572"/>
 </svg>
-<p>Refresh Metrics</p>
+
 
             </div>
 
@@ -64,12 +87,59 @@ Add new wine</button></div>
         </div>
         
 
+        <div className="chartmainbox">
 
+            <div>
+
+            <div className="chartleftbox">
+                <div className="upperoneline" ><h1>$74,749.50</h1>
+                    <span className="myflex "><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.67656 12.6766C7.87188 12.8719 8.18844 12.8719 8.38375 12.6766L10 11.0606L12.6466 13.7072C12.8419 13.9025 13.1584 13.9025 13.3538 13.7072L16.7981 10.2625L17.7197 11.1844C18.1922 11.6569 19 11.3222 19 10.6541V7.5C19 7.22375 18.7762 7 18.5 7H15.3459C14.6778 7 14.3431 7.80781 14.8156 8.28031L15.7375 9.20188L13 11.9394L10.3534 9.29281C10.1581 9.0975 9.84156 9.0975 9.64625 9.29281L7.32312 11.6159C7.12781 11.8113 7.12781 12.1278 7.32312 12.3231L7.67656 12.6766ZM19.5 16.5H5.5V6.5C5.5 6.22375 5.27625 6 5 6H4.5C4.22375 6 4 6.22375 4 6.5V17C4 17.5522 4.44781 18 5 18H19.5C19.7762 18 20 17.7762 20 17.5V17C20 16.7238 19.7762 16.5 19.5 16.5Z" fill="#2FCA72"/></svg>
+                        <p>Heighest revenue since 2 weeks</p>
+                    </span>
+                    
+                </div>
+                <span  style={{marginTop:"-35px"}} className="myflex"><svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 0L16.295 2.295L11.415 7.16999L7.41501 3.17001L0 10.585L1.41501 12L7.41501 5.99999L11.415 10L17.705 3.705L20 5.99999V0H14Z" fill="#2FCA72"/></svg>
+                        <p>+21% Last week</p>
+                    </span>
+                    <Example></Example>
+
+            </div>
+
+                
+            </div>
+
+            <div style={{padding:"20px"}} className="chartrightbox">
+                <h4 className="graytext">Total Profit</h4>
+                <h1 style={{color:"#99405a"}}>$12,545.00</h1>
+                <span   className="myflex"><svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 0L16.295 2.295L11.415 7.16999L7.41501 3.17001L0 10.585L1.41501 12L7.41501 5.99999L11.415 10L17.705 3.705L20 5.99999V0H14Z" fill="#2FCA72"/></svg>
+                        <p>+34% Last week</p>
+                    </span>
+                    <h4 className="graytext">Total Products Sold</h4>
+                    <h1>329</h1>
+            </div>
+        </div>
     
     </div>
-    <Example></Example>
-    
-            
+
+    <div className="fourthboxmain">
+
+    <h4 style={{textAlign:"left",margin:"5px 0px 15px 10px"}}>Inventory</h4>
+    <div className="mythead"><input type="checkbox" /><div></div><div>PRODUCT</div><div>RATING</div><div>VINTAGE</div><div>QTY</div><div>VOLUME</div><div>COST</div><div>PRICE</div></div>
         </div>
+
+        {mydata.map((e)=>{
+            return(
+                <Onerow name={e.Name} img={e.img} das={e.das} rating={e.rating} vintage={e.vintage} qty={e.qty}  volume={e.volume} cost={e.cost} pice={e.pice}></Onerow>
+                
+            )
+        })}
+
+    
+
+    </div>
+    
     )
 }
